@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
- * _strncat - char function
+ * _strcat - char function
  * @src: pointer value of string to be concatenated
  * @dest: pointer value of string to concatenate to
- * @n: most number of bytes to use
  *
  * Description: Concatenates two strings
  *
- * Return: dest (the resulting string pointer)
+ * Return: dest (the resulting string)
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	int i = 0;
 	int j = 0;
@@ -20,9 +19,11 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		j++;
 	}
-	for (i = 0; src[i] && i < n; i++)
+
+	for (i = 0; src[i]; i++)
 	{
 		dest[j++] = src[i];
 	}
+
 	return (dest);
 }
